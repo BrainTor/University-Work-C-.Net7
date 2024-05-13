@@ -95,22 +95,25 @@ namespace Kursach
             toolStripMenuItem2.Name = "toolStripMenuItem2";
             toolStripMenuItem2.Size = new Size(45, 29);
             toolStripMenuItem2.Text = "🔁";
+            toolStripMenuItem2.Click += reload;
             // 
             // toolStripMenuItem3
             // 
             toolStripMenuItem3.Alignment = ToolStripItemAlignment.Right;
             toolStripMenuItem3.Font = new Font("Cascadia Mono", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            toolStripMenuItem3.Name = "toolStripMenuItem3";
+            toolStripMenuItem3.Name = "after";
             toolStripMenuItem3.Size = new Size(35, 29);
             toolStripMenuItem3.Text = "→";
+            toolStripMenuItem3.Click += before_and_after;
             // 
             // toolStripMenuItem4
             // 
             toolStripMenuItem4.Alignment = ToolStripItemAlignment.Right;
             toolStripMenuItem4.Font = new Font("Cascadia Mono", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            toolStripMenuItem4.Name = "toolStripMenuItem4";
+            toolStripMenuItem4.Name = "before";
             toolStripMenuItem4.Size = new Size(35, 29);
             toolStripMenuItem4.Text = "←";
+            toolStripMenuItem4.Click += before_and_after;
             // 
             // toolStripMenuItem5
             // 

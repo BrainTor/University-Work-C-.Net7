@@ -15,6 +15,13 @@ namespace Kursach
     {
         public delegate void Strart_Transfer_Delegate(List <int> list_items);
         public event Strart_Transfer_Delegate Start_TransferEvent;
+
+        public delegate void Add_Transfer_Delegate(int index, int value);
+        public event Add_Transfer_Delegate Add_TransferEvent;
+
+        public delegate void Delete_Transfer_Delegate(int index);
+        public event Delete_Transfer_Delegate Delete_TransferEvent;
+
         public add_data_form(string data)
         {
             InitializeComponent();
@@ -35,6 +42,8 @@ namespace Kursach
                     break;
             }
             Start_TransferEvent += Form1.recive_data_start;
+            Add_TransferEvent += Form1.recive_data_add;
+            Delete_TransferEvent += Form1.recive_data_delete;
             
         }
         public void sendData(object sender, EventArgs e)
@@ -75,10 +84,12 @@ namespace Kursach
                     Close();
                     break;
                 case "but_delete":
-                    MessageBox.Show("Delete");
+                    Delete_TransferEvent?.Invoke((int)numericUpDown5.Value);
+                    Close(); ;
                     break;
                 case "but_add":
-                    MessageBox.Show("Add");
+                    Add_TransferEvent?.Invoke((int)numericUpDown2.Value, (int)numericUpDown3.Value);
+                    Close();
                     break;
             }
         }

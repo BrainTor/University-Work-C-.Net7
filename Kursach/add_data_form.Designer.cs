@@ -234,6 +234,7 @@
             button2.TabIndex = 2;
             button2.Text = "Добавить";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += sendData;
             // 
             // tableLayoutPanel4
             // 
@@ -277,6 +278,7 @@
             button3.TabIndex = 2;
             button3.Text = "Удалить";
             button3.UseVisualStyleBackColor = true;
+            button3.Click += sendData;
             // 
             // panel1
             // 
