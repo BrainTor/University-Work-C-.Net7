@@ -41,10 +41,11 @@ namespace Kursach
             toolStripMenuItem4 = new ToolStripMenuItem();
             toolStripMenuItem5 = new ToolStripMenuItem();
             удалитьToolStripMenuItem = new ToolStripMenuItem();
+            toolStripMenuItem6 = new ToolStripMenuItem();
+            toolStripMenuItem7 = new ToolStripMenuItem();
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
-        
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -53,7 +54,7 @@ namespace Kursach
             menuStrip1.BackColor = Color.FromArgb(0, 173, 181);
             menuStrip1.Font = new Font("Cascadia Mono", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             menuStrip1.ForeColor = Color.FromArgb(238, 238, 238);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { переходПоСтраницамToolStripMenuItem, toolStripMenuItem1, начатьРаботуToolStripMenuItem, добавитьУдалитьToolStripMenuItem, toolStripMenuItem2, toolStripMenuItem3, toolStripMenuItem4, toolStripMenuItem5, удалитьToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { переходПоСтраницамToolStripMenuItem, toolStripMenuItem1, начатьРаботуToolStripMenuItem, добавитьУдалитьToolStripMenuItem, toolStripMenuItem2, toolStripMenuItem3, toolStripMenuItem4, toolStripMenuItem5, удалитьToolStripMenuItem, toolStripMenuItem7, toolStripMenuItem6 });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.RenderMode = ToolStripRenderMode.System;
@@ -127,6 +128,22 @@ namespace Kursach
             удалитьToolStripMenuItem.Text = "Удалить";
             удалитьToolStripMenuItem.Click += open_add;
             // 
+            // toolStripMenuItem6
+            // 
+            toolStripMenuItem6.Alignment = ToolStripItemAlignment.Right;
+            toolStripMenuItem6.Name = "save_but";
+            toolStripMenuItem6.Size = new Size(42, 29);
+            toolStripMenuItem6.Text = "📃";
+            toolStripMenuItem6.Click += saveOrLoadToFile;
+            // 
+            // toolStripMenuItem7
+            // 
+            toolStripMenuItem7.Alignment = ToolStripItemAlignment.Right;
+            toolStripMenuItem7.Name = "load_but";
+            toolStripMenuItem7.Size = new Size(42, 29);
+            toolStripMenuItem7.Text = "📤";
+            toolStripMenuItem7.Click += saveOrLoadToFile;
+            // 
             // label1
             // 
             label1.Anchor = AnchorStyles.None;
@@ -157,17 +174,12 @@ namespace Kursach
             label3.TabIndex = 3;
             label3.Text = "Данные не добавленны, добавьте для продолжения";
             // 
-            // button1
-            // 
- 
-            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(9F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(34, 40, 49);
             ClientSize = new Size(984, 661);
-           
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
@@ -200,7 +212,9 @@ namespace Kursach
         private Label label3;
         private ToolStripMenuItem toolStripMenuItem5;
         private ToolStripMenuItem удалитьToolStripMenuItem;
-    
+
         public Label label2;
+        private ToolStripMenuItem toolStripMenuItem6;
+        private ToolStripMenuItem toolStripMenuItem7;
     }
 }

@@ -37,17 +37,15 @@
             button1 = new Button();
             start = new Panel();
             delete = new Panel();
-            add = new Panel();
-            tableLayoutPanel2 = new TableLayoutPanel();
-            numericUpDown2 = new NumericUpDown();
-            label1 = new Label();
-            label4 = new Label();
-            numericUpDown3 = new NumericUpDown();
-            button2 = new Button();
             tableLayoutPanel4 = new TableLayoutPanel();
             numericUpDown5 = new NumericUpDown();
             label7 = new Label();
             button3 = new Button();
+            add = new Panel();
+            tableLayoutPanel2 = new TableLayoutPanel();
+            label1 = new Label();
+            numericUpDown3 = new NumericUpDown();
+            button2 = new Button();
             panel1 = new Panel();
             tableLayoutPanel3 = new TableLayoutPanel();
             numericUpDown4 = new NumericUpDown();
@@ -56,12 +54,11 @@
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
             start.SuspendLayout();
             delete.SuspendLayout();
-            add.SuspendLayout();
-            tableLayoutPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown3).BeginInit();
             tableLayoutPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)numericUpDown5).BeginInit();
+            add.SuspendLayout();
+            tableLayoutPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown3).BeginInit();
             tableLayoutPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)numericUpDown4).BeginInit();
             SuspendLayout();
@@ -97,7 +94,7 @@
             // 
             textBox1.Anchor = AnchorStyles.Left;
             textBox1.Location = new Point(215, 124);
-            textBox1.Name = "mas_box";
+            textBox1.Name = "textBox1";
             textBox1.PlaceholderText = "1,2,3,4";
             textBox1.Size = new Size(185, 25);
             textBox1.TabIndex = 1;
@@ -106,7 +103,7 @@
             // 
             numericUpDown1.Anchor = AnchorStyles.Left;
             numericUpDown1.Location = new Point(215, 33);
-            numericUpDown1.Name = "legth_box";
+            numericUpDown1.Name = "numericUpDown1";
             numericUpDown1.Size = new Size(185, 25);
             numericUpDown1.TabIndex = 2;
             // 
@@ -138,8 +135,8 @@
             button1.Size = new Size(182, 32);
             button1.TabIndex = 2;
             button1.Text = "Сохранить";
-            button1.Click += sendData;
             button1.UseVisualStyleBackColor = true;
+            button1.Click += sendData;
             // 
             // start
             // 
@@ -161,81 +158,6 @@
             delete.TabIndex = 5;
             delete.Visible = false;
             // 
-            // add
-            // 
-            add.Controls.Add(tableLayoutPanel2);
-            add.Controls.Add(button2);
-            add.Location = new Point(161, 40);
-            add.Name = "add";
-            add.Size = new Size(512, 290);
-            add.TabIndex = 4;
-            add.Visible = false;
-            // 
-            // tableLayoutPanel2
-            // 
-            tableLayoutPanel2.ColumnCount = 2;
-            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel2.Controls.Add(numericUpDown2, 1, 0);
-            tableLayoutPanel2.Controls.Add(label1, 0, 1);
-            tableLayoutPanel2.Controls.Add(label4, 0, 0);
-            tableLayoutPanel2.Controls.Add(numericUpDown3, 1, 1);
-            tableLayoutPanel2.Location = new Point(38, 37);
-            tableLayoutPanel2.Name = "tableLayoutPanel2";
-            tableLayoutPanel2.RowCount = 2;
-            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel2.Size = new Size(425, 183);
-            tableLayoutPanel2.TabIndex = 1;
-            // 
-            // numericUpDown2
-            // 
-            numericUpDown2.Anchor = AnchorStyles.Left;
-            numericUpDown2.Location = new Point(215, 33);
-            numericUpDown2.Name = "add_value_box";
-            numericUpDown2.Size = new Size(185, 25);
-            numericUpDown2.TabIndex = 2;
-
-            // 
-            // label1
-            // 
-            label1.Anchor = AnchorStyles.Right;
-            label1.Font = new Font("Cascadia Mono", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(3, 123);
-            label1.Name = "label1";
-            label1.Size = new Size(206, 27);
-            label1.TabIndex = 3;
-            label1.Text = "Введите значение ячейки";
-            // 
-            // label4
-            // 
-            label4.Anchor = AnchorStyles.Right;
-            label4.Font = new Font("Cascadia Mono", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.Location = new Point(3, 33);
-            label4.Name = "label4";
-            label4.Size = new Size(206, 24);
-            label4.TabIndex = 0;
-            label4.Text = "Введите номер ячейки";
-            // 
-            // numericUpDown3
-            // 
-            numericUpDown3.Anchor = AnchorStyles.Left;
-            numericUpDown3.Location = new Point(215, 124);
-            numericUpDown3.Name = "add_number_box";
-            numericUpDown3.Size = new Size(185, 25);
-            numericUpDown3.TabIndex = 4;
-            // 
-            // button2
-            // 
-            button2.ForeColor = Color.Black;
-            button2.Location = new Point(171, 241);
-            button2.Name = "but_add";
-            button2.Size = new Size(182, 32);
-            button2.TabIndex = 2;
-            button2.Text = "Добавить";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += sendData;
-            // 
             // tableLayoutPanel4
             // 
             tableLayoutPanel4.ColumnCount = 2;
@@ -255,7 +177,7 @@
             // 
             numericUpDown5.Anchor = AnchorStyles.Left;
             numericUpDown5.Location = new Point(215, 79);
-            numericUpDown5.Name = "delete_number_box";
+            numericUpDown5.Name = "numericUpDown5";
             numericUpDown5.Size = new Size(185, 25);
             numericUpDown5.TabIndex = 2;
             // 
@@ -280,6 +202,60 @@
             button3.UseVisualStyleBackColor = true;
             button3.Click += sendData;
             // 
+            // add
+            // 
+            add.Controls.Add(tableLayoutPanel2);
+            add.Controls.Add(button2);
+            add.Location = new Point(161, 40);
+            add.Name = "add";
+            add.Size = new Size(512, 290);
+            add.TabIndex = 4;
+            add.Visible = false;
+            // 
+            // tableLayoutPanel2
+            // 
+            tableLayoutPanel2.ColumnCount = 2;
+            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel2.Controls.Add(label1, 0, 1);
+            tableLayoutPanel2.Controls.Add(numericUpDown3, 1, 1);
+            tableLayoutPanel2.Location = new Point(38, 37);
+            tableLayoutPanel2.Name = "tableLayoutPanel2";
+            tableLayoutPanel2.RowCount = 1;
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tableLayoutPanel2.Size = new Size(425, 183);
+            tableLayoutPanel2.TabIndex = 1;
+            // 
+            // label1
+            // 
+            label1.Anchor = AnchorStyles.Right;
+            label1.Font = new Font("Cascadia Mono", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(3, 123);
+            label1.Name = "label1";
+            label1.Size = new Size(206, 27);
+            label1.TabIndex = 3;
+            label1.Text = "Введите значение ячейки";
+            // 
+            // numericUpDown3
+            // 
+            numericUpDown3.Anchor = AnchorStyles.Left;
+            numericUpDown3.Location = new Point(215, 124);
+            numericUpDown3.Name = "numericUpDown3";
+            numericUpDown3.Size = new Size(185, 25);
+            numericUpDown3.TabIndex = 4;
+            // 
+            // button2
+            // 
+            button2.ForeColor = Color.Black;
+            button2.Location = new Point(171, 241);
+            button2.Name = "but_add";
+            button2.Size = new Size(182, 32);
+            button2.TabIndex = 2;
+            button2.Text = "Добавить";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += sendData;
+            // 
             // panel1
             // 
             panel1.Location = new Point(0, 0);
@@ -303,7 +279,7 @@
             // 
             numericUpDown4.Anchor = AnchorStyles.Left;
             numericUpDown4.Location = new Point(103, 38);
-            numericUpDown4.Name = "delete_value_box";
+            numericUpDown4.Name = "numericUpDown4";
             numericUpDown4.Size = new Size(94, 23);
             numericUpDown4.TabIndex = 2;
             // 
@@ -338,12 +314,11 @@
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
             start.ResumeLayout(false);
             delete.ResumeLayout(false);
-            add.ResumeLayout(false);
-            tableLayoutPanel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)numericUpDown2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown3).EndInit();
             tableLayoutPanel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)numericUpDown5).EndInit();
+            add.ResumeLayout(false);
+            tableLayoutPanel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)numericUpDown3).EndInit();
             tableLayoutPanel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)numericUpDown4).EndInit();
             ResumeLayout(false);
@@ -361,9 +336,7 @@
         private Panel start;
         private Panel add;
         private TableLayoutPanel tableLayoutPanel2;
-        private NumericUpDown numericUpDown2;
         private Label label1;
-        private Label label4;
         private Button button2;
         private Panel delete;
         private TableLayoutPanel tableLayoutPanel4;

@@ -13,10 +13,10 @@ namespace Kursach
 {
     public partial class add_data_form : Form
     {
-        public delegate void Strart_Transfer_Delegate(List <int> list_items);
+        public delegate void Strart_Transfer_Delegate(List<int> list_items);
         public event Strart_Transfer_Delegate Start_TransferEvent;
 
-        public delegate void Add_Transfer_Delegate(int index, int value);
+        public delegate void Add_Transfer_Delegate(int value);
         public event Add_Transfer_Delegate Add_TransferEvent;
 
         public delegate void Delete_Transfer_Delegate(int index);
@@ -25,7 +25,7 @@ namespace Kursach
         public add_data_form(string data)
         {
             InitializeComponent();
-               
+
             switch (data)
             {
                 case "start":
@@ -44,11 +44,11 @@ namespace Kursach
             Start_TransferEvent += Form1.recive_data_start;
             Add_TransferEvent += Form1.recive_data_add;
             Delete_TransferEvent += Form1.recive_data_delete;
-            
+
         }
         public void sendData(object sender, EventArgs e)
         {
-            switch (((Button) sender).Name)
+            switch (((Button)sender).Name)
             {
                 case "but_start":
                     if (string.IsNullOrEmpty(textBox1.Text))
@@ -63,7 +63,7 @@ namespace Kursach
                     }
                     List<string> values = new List<string>();
                     values.AddRange(textBox1.Text.Split(','));
-                    if(values.Count!= numericUpDown1.Value)
+                    if (values.Count != numericUpDown1.Value)
                     {
                         MessageBox.Show("Вы ввели значений больше чем нужно :)");
                         return;
@@ -88,12 +88,13 @@ namespace Kursach
                     Close(); ;
                     break;
                 case "but_add":
-                    Add_TransferEvent?.Invoke((int)numericUpDown2.Value, (int)numericUpDown3.Value);
+                   
+                    Add_TransferEvent?.Invoke((int)numericUpDown3.Value);
                     Close();
                     break;
             }
         }
-        
+
 
 
     }

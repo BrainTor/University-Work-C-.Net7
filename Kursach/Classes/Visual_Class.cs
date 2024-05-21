@@ -35,7 +35,9 @@ namespace Kursach.Classes
                     Text = $"{item}",
                     Name = "button_show" + counter,
                     Margin = new Padding(5), // Отступы вокруг кнопки
-                    Size = new Size(80, 40) // Размер кнопок
+                    Size = new Size(80, 40),// Размер кнопок
+                    BackColor = Color.Transparent,
+                    ForeColor = Color.Black
                 };
                 Buttons.Add(button);
                 flowPanel.Controls.Add(button);
@@ -76,7 +78,9 @@ namespace Kursach.Classes
                     Text = $"{item}",
                     Name = "button_show" + counter,
                     Margin = new Padding(5), // Отступы вокруг кнопки
-                    Size = new Size(80, 40) // Размер кнопок
+                    Size = new Size(80, 40), // Размер кнопок
+                    BackColor = Color.Transparent,
+                    ForeColor = Color.Black
                 };
                 Buttons.Add(button);
                 flowPanel.Controls.Add(button);
@@ -94,14 +98,38 @@ namespace Kursach.Classes
         {
                 Button firstButton = form.Controls.Find("button_show" + state.get_number_of_operation(), true).FirstOrDefault() as Button;
                 firstButton.Text = state.get_list_values()[state.get_number_of_operation()].ToString() ;
+                firstButton.BackColor = Color.Green;
+                firstButton.ForeColor = Color.White;
                 Button secondBut = form.Controls.Find("button_show" + (state.get_number_of_operation()+1), true).FirstOrDefault() as Button;
                 secondBut.Text = state.get_list_values()[state.get_number_of_operation()+1].ToString();
+                secondBut.BackColor = Color.Red;
+                secondBut.ForeColor = Color.White;
+                for (int i = 0; i < state.get_list_values().Count; i++)
+                {
+                    if (i == state.get_number_of_operation() || i == state.get_number_of_operation() + 1)
+                        continue;
+                    Button temp_button = form.Controls.Find("button_show" + i, true).FirstOrDefault() as Button;
+                    temp_button.BackColor = Color.Transparent;
+                    temp_button.ForeColor = Color.Black; 
+                }
             if (vector.Equals("b"))
             {
                 firstButton = form.Controls.Find("button_show" + state.get_number_of_operation(), true).FirstOrDefault() as Button;
                 firstButton.Text = state.get_list_values()[state.get_number_of_operation()].ToString();
+                firstButton.BackColor = Color.Green;
+                firstButton.ForeColor = Color.White;
                 secondBut = form.Controls.Find("button_show" + (state.get_number_of_operation() -1 ), true).FirstOrDefault() as Button;
                 secondBut.Text = state.get_list_values()[state.get_number_of_operation()-1].ToString();
+                secondBut.BackColor = Color.Red;
+                secondBut.ForeColor = Color.White;
+                for (int i = 0; i < state.get_list_values().Count; i++)
+                {
+                    if (i == state.get_number_of_operation() || i == state.get_number_of_operation() + 1)
+                        continue;
+                    Button temp_button = form.Controls.Find("button_show" + i, true).FirstOrDefault() as Button;
+                    temp_button.BackColor = Color.Transparent;
+                    temp_button.ForeColor = Color.Black;
+                }
             }
                     
         }

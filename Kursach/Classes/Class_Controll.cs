@@ -14,9 +14,9 @@ namespace Kursach.Classes
             State_Classs state = new State_Classs(param.List, buttons);
             state.set_number_of_operation(param.index);
             state.set_state("Sort");
+          
             state.isOver = param.isOver;
             state_list.set_state(state);
-            
             return state;
         }
 
